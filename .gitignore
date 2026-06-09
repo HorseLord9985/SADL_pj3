@@ -1,3 +1,7 @@
 __pycache__/
 .cache/
 *.pkl
+lora_samples/
+npr_test_100/
+out256/
+checkpoints/
