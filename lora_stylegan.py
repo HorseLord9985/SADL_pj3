@@ -50,15 +50,22 @@ class LoRASynthesisLayer(nn.Module):
         self.in_features = in_ch * k * k
         self.out_features = out_ch
 
-        #
-        # LoRA matrices
-        #
+        device = original_layer.weight.device
+
         self.lora_A = nn.Parameter(
-            torch.randn(rank, self.in_features) * 0.01
+            torch.randn(
+                rank,
+                self.in_features,
+                device=device
+            ) * 0.01
         )
 
         self.lora_B = nn.Parameter(
-            torch.zeros(self.out_features, rank)
+            torch.zeros(
+                self.out_features,
+                rank,
+                device=device
+            )
         )
 
     def get_delta_weight(self):

@@ -186,6 +186,7 @@ G = inject_lora(
     rank=args.rank,
     alpha=args.rank,
 )
+G.to(DEVICE)
 
 
 # ==================================================
