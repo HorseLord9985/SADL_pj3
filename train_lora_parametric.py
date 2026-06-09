@@ -15,27 +15,78 @@ from lora_stylegan import (
 )
 
 from npr.detector import NPRDetector
-
+import argparse
 
 # ==================================================
 # CONFIG
 # ==================================================
 
+parser = argparse.ArgumentParser()
+
+parser.add_argument(
+    "--run-name",
+    type=str,
+    required=True,
+)
+
+parser.add_argument(
+    "--steps",
+    type=int,
+    default=500,
+)
+
+parser.add_argument(
+    "--batch-size",
+    type=int,
+    default=4,
+)
+
+parser.add_argument(
+    "--lr",
+    type=float,
+    default=1e-4,
+)
+
+parser.add_argument(
+    "--rank",
+    type=int,
+    default=8,
+)
+
+args = parser.parse_args()
+
+RUN_DIR = os.path.join(
+    "runs",
+    args.run_name,
+)
+
+OUTPUT_DIR = os.path.join(
+    RUN_DIR,
+    "samples",
+)
+
+CHECKPOINT_DIR = os.path.join(
+    RUN_DIR,
+    "checkpoints",
+)
+
+LOG_FILE = os.path.join(
+    RUN_DIR,
+    "training_log.csv",
+)
+
 NETWORK = "stylegan2-ffhq-256x256.pkl"
 
-DEVICE = torch.device("cpu")
+DEVICE = torch.device(
+    "cuda" if torch.cuda.is_available() else "cpu"
+)
 
-LOG_FILE = "training_log.csv"
+STEPS = args.steps
+BATCH_SIZE = args.batch_size
+LR = args.lr
 
-STEPS = 500
-BATCH_SIZE = 4
-
-LR = 1e-4
-
-SAVE_EVERY = 10
-
-OUTPUT_DIR = "lora_samples"
-CHECKPOINT_DIR = "checkpoints"
+SAVE_EVERY = 250
+CHECKPOINT_EVERY = 100
 
 os.makedirs(
     OUTPUT_DIR,
@@ -132,8 +183,8 @@ print("Injecting LoRA...")
 
 G = inject_lora(
     G,
-    rank=8,
-    alpha=8,
+    rank=args.rank,
+    alpha=args.rank,
 )
 
 
@@ -243,6 +294,18 @@ with open(LOG_FILE, "w") as f:
         f"0,"
         f"baseline\n"
     )
+
+
+
+print("\n===== CONFIG =====")
+print(f"run      : {args.run_name}")
+print(f"device   : {DEVICE}")
+print(f"steps    : {STEPS}")
+print(f"batch    : {BATCH_SIZE}")
+print(f"lr       : {LR}")
+print(f"rank     : {args.rank}")
+print("==================\n")
+
 for step in range(STEPS):
 
     optimizer.zero_grad()
@@ -297,6 +360,26 @@ for step in range(STEPS):
     optimizer.step()
 
     #
+    # Checkpoint
+    #
+
+    if step % CHECKPOINT_EVERY == 0:
+
+        ckpt_path = os.path.join(
+            CHECKPOINT_DIR,
+            f"lora_step_{step:04d}.pt",
+        )
+
+        torch.save(
+            get_lora_state_dict(G),
+            ckpt_path,
+        )
+
+        print(
+            f"Checkpoint saved: {ckpt_path}"
+        )
+
+    #
     # Monitoring
     #
 
@@ -315,20 +398,21 @@ for step in range(STEPS):
 
         norm = lora_norm(G)
 
-        print(
-                f"step={step:04d} "
-                f"loss={loss.item():.4f} "
-                f"score={score:.4f} "
-                f"acc={100*acc:.2f}% "
-                f"lora_norm={norm:.4f}"
-            )
         checkpoint_name = ""
 
-        if step % 50 == 0:
+        if step % CHECKPOINT_EVERY == 0:
 
             checkpoint_name = (
                 f"lora_step_{step:04d}.pt"
             )
+
+        print(
+            f"step={step:04d} "
+            f"loss={loss.item():.4f} "
+            f"score={score:.4f} "
+            f"acc={100*acc:.2f}% "
+            f"lora_norm={norm:.4f}"
+        )
 
         with open(LOG_FILE, "a") as f:
 
@@ -339,22 +423,6 @@ for step in range(STEPS):
                 f"{acc},"
                 f"{norm},"
                 f"{checkpoint_name}\n"
-            )
-
-        if step % 50 == 0:
-
-            ckpt_path = os.path.join(
-                CHECKPOINT_DIR,
-                f"lora_step_{step:04d}.pt",
-            )
-
-            torch.save(
-                get_lora_state_dict(G),
-                ckpt_path,
-            )
-
-            print(
-                f"Checkpoint saved: {ckpt_path}"
             )
 
         if score < best_score:
