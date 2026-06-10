@@ -1,0 +1,159 @@
+===== START Wed Jun 10 12:09:42 AM CEST 2026 =====
+
+==================================================
+RUNNING: --run-name steps_500 --steps 500 --rank 8 --batch-size 16
+START: Wed Jun 10 12:09:42 AM CEST 2026
+==================================================
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 103,936
+
+Baseline score=64.4309 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : steps_500
+device   : cpu
+steps    : 500
+batch    : 16
+lr       : 0.0001
+rank     : 8
+==================
+
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0000.pt
+step=0000 loss=58.2979 score=64.4266 acc=100.00% lora_norm=7.2664
+New best model! score=64.4266
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0100.pt
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0200.pt
+step=0250 loss=29.0822 score=28.3195 acc=100.00% lora_norm=24.1256
+New best model! score=28.3195
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0300.pt
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0400.pt
+
+Training finished.
+Final checkpoint saved: runs/steps_500/checkpoints/lora_final.pt
+Best detector score: 28.3195
+FINISHED: Wed Jun 10 01:36:00 AM CEST 2026
+
+==================================================
+RUNNING: --run-name baseline --steps 1000 --rank 8 --batch-size 16
+START: Wed Jun 10 01:36:00 AM CEST 2026
+==================================================
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 103,936
+
+Baseline score=56.5387 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : baseline
+device   : cpu
+steps    : 1000
+batch    : 16
+lr       : 0.0001
+rank     : 8
+==================
+
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0000.pt
+step=0000 loss=63.9165 score=56.5341 acc=100.00% lora_norm=7.2394
+New best model! score=56.5341
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0100.pt
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0200.pt
+step=0250 loss=24.2791 score=20.3939 acc=93.75% lora_norm=23.9069
+New best model! score=20.3939
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0300.pt
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0400.pt
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0500.pt
+step=0500 loss=0.2204 score=-3.3286 acc=37.50% lora_norm=36.6537
+New best model! score=-3.3286
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0600.pt
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0700.pt
+step=0750 loss=-24.9227 score=-26.0190 acc=0.00% lora_norm=47.0544
+New best model! score=-26.0190
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0800.pt
+Checkpoint saved: runs/baseline/checkpoints/lora_step_0900.pt
+
+Training finished.
+Final checkpoint saved: runs/baseline/checkpoints/lora_final.pt
+Best detector score: -26.0190
+FINISHED: Wed Jun 10 04:26:37 AM CEST 2026
+
+==================================================
+RUNNING: --run-name rank_2 --steps 1000 --rank 2 --batch-size 16
+START: Wed Jun 10 04:26:37 AM CEST 2026
+==================================================
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 25,984
+
+Baseline score=61.2212 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : rank_2
+device   : cpu
+steps    : 1000
+batch    : 16
+lr       : 0.0001
+rank     : 2
+==================
+
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0000.pt
+step=0000 loss=57.4287 score=61.2202 acc=100.00% lora_norm=3.6396
+New best model! score=61.2202
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0100.pt
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0200.pt
+step=0250 loss=49.7282 score=47.3255 acc=100.00% lora_norm=12.6417
+New best model! score=47.3255
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0300.pt
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0400.pt
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0500.pt
+step=0500 loss=23.8975 score=22.5351 acc=100.00% lora_norm=23.1253
+New best model! score=22.5351
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0600.pt
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0700.pt
+step=0750 loss=9.8435 score=8.7897 acc=81.25% lora_norm=30.0718
+New best model! score=8.7897
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0800.pt
+Checkpoint saved: runs/rank_2/checkpoints/lora_step_0900.pt
+
+Training finished.
+Final checkpoint saved: runs/rank_2/checkpoints/lora_final.pt
+Best detector score: 8.7897
+FINISHED: Wed Jun 10 07:16:50 AM CEST 2026
+
+==================================================
+RUNNING: --run-name rank_4 --steps 1000 --rank 4 --batch-size 16
+START: Wed Jun 10 07:16:50 AM CEST 2026
+==================================================
