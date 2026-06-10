@@ -2,6 +2,10 @@ __pycache__/
 .cache/
 *.pkl
 lora_samples/
+lora_samples_ohja/
 npr_test_100/
 out256/
 checkpoints/
+checkpoints_ohja/
+**/samples/
+**/samples_ohja/
