@@ -1,0 +1,87 @@
+## Loading module
+## Current working directory is /home/s2669447/data1/SADL_pj3
+Running task 7
+uv run train_lora_parametric.py --run-name lr_5e5     --steps 1001 --rank 8  --batch-size 16 --lr 5e-5
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 103,936
+
+Baseline score=65.7941 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : lr_5e5
+device   : cpu
+steps    : 1001
+batch    : 16
+lr       : 5e-05
+rank     : 8
+==================
+
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0000.pt
+step=0000 loss=65.5319 score=65.7915 acc=100.00% lora_norm=7.2423
+New best model! score=65.7915
+step=0050 loss=62.6415 score=65.3516 acc=100.00% lora_norm=7.7208
+New best model! score=65.3516
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0100.pt
+step=0100 loss=62.6847 score=63.7688 acc=100.00% lora_norm=8.8185
+New best model! score=63.7688
+step=0150 loss=61.6771 score=60.7110 acc=100.00% lora_norm=10.4547
+New best model! score=60.7110
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0200.pt
+step=0200 loss=49.3341 score=56.4940 acc=100.00% lora_norm=12.4377
+New best model! score=56.4940
+step=0250 loss=53.8238 score=51.4096 acc=100.00% lora_norm=14.5527
+New best model! score=51.4096
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0300.pt
+step=0300 loss=38.6488 score=45.5000 acc=100.00% lora_norm=16.7560
+New best model! score=45.5000
+step=0350 loss=30.8500 score=39.2100 acc=100.00% lora_norm=18.9422
+New best model! score=39.2100
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0400.pt
+step=0400 loss=39.2997 score=33.3093 acc=100.00% lora_norm=20.9948
+New best model! score=33.3093
+step=0450 loss=32.2673 score=28.5424 acc=100.00% lora_norm=22.8564
+New best model! score=28.5424
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0500.pt
+step=0500 loss=31.1906 score=24.7276 acc=93.75% lora_norm=24.5163
+New best model! score=24.7276
+step=0550 loss=19.9133 score=21.5826 acc=93.75% lora_norm=26.0379
+New best model! score=21.5826
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0600.pt
+step=0600 loss=16.7398 score=18.7523 acc=93.75% lora_norm=27.4522
+New best model! score=18.7523
+step=0650 loss=22.3690 score=16.1545 acc=87.50% lora_norm=28.7406
+New best model! score=16.1545
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0700.pt
+step=0700 loss=18.4343 score=13.5533 acc=75.00% lora_norm=29.9701
+New best model! score=13.5533
+step=0750 loss=9.7511 score=11.1955 acc=68.75% lora_norm=31.1902
+New best model! score=11.1955
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0800.pt
+step=0800 loss=12.2023 score=9.1232 acc=62.50% lora_norm=32.2633
+New best model! score=9.1232
+step=0850 loss=11.1716 score=7.1253 acc=56.25% lora_norm=33.2984
+New best model! score=7.1253
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_0900.pt
+step=0900 loss=9.5749 score=5.2434 acc=56.25% lora_norm=34.3244
+New best model! score=5.2434
+step=0950 loss=5.4613 score=3.5899 acc=50.00% lora_norm=35.2647
+New best model! score=3.5899
+Checkpoint saved: runs/lr_5e5/checkpoints/lora_step_1000.pt
+step=1000 loss=2.5662 score=1.8530 acc=43.75% lora_norm=36.2385
+New best model! score=1.8530
+
+Training finished.
+Final checkpoint saved: runs/lr_5e5/checkpoints/lora_final.pt
+Best detector score: 1.8530

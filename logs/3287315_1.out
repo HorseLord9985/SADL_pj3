@@ -1,0 +1,287 @@
+## Loading module
+## Current working directory is /home/s2669447/data1/SADL_pj3
+Running task 1
+uv run train_lora_parametric.py --run-name steps_5000 --steps 5001 --rank 8  --batch-size 16
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 103,936
+
+Baseline score=58.0798 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : steps_5000
+device   : cpu
+steps    : 5001
+batch    : 16
+lr       : 0.0001
+rank     : 8
+==================
+
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0000.pt
+step=0000 loss=64.0732 score=58.0766 acc=100.00% lora_norm=7.2612
+New best model! score=58.0766
+step=0050 loss=60.0375 score=57.0369 acc=100.00% lora_norm=8.5088
+New best model! score=57.0369
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0100.pt
+step=0100 loss=56.4323 score=52.6312 acc=100.00% lora_norm=11.5907
+New best model! score=52.6312
+step=0150 loss=53.0458 score=44.0882 acc=100.00% lora_norm=15.7943
+New best model! score=44.0882
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0200.pt
+step=0200 loss=40.4276 score=34.2883 acc=100.00% lora_norm=20.1050
+New best model! score=34.2883
+step=0250 loss=25.9079 score=25.1978 acc=100.00% lora_norm=23.9281
+New best model! score=25.1978
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0300.pt
+step=0300 loss=16.7857 score=18.4587 acc=93.75% lora_norm=27.0026
+New best model! score=18.4587
+step=0350 loss=15.5544 score=12.7519 acc=93.75% lora_norm=29.6926
+New best model! score=12.7519
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0400.pt
+step=0400 loss=10.7686 score=7.7634 acc=81.25% lora_norm=32.0320
+New best model! score=7.7634
+step=0450 loss=3.8193 score=3.2186 acc=62.50% lora_norm=34.2044
+New best model! score=3.2186
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0500.pt
+step=0500 loss=0.6450 score=-0.8803 acc=25.00% lora_norm=36.2232
+New best model! score=-0.8803
+step=0550 loss=-2.2582 score=-4.6991 acc=25.00% lora_norm=38.0819
+New best model! score=-4.6991
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0600.pt
+step=0600 loss=-5.3100 score=-7.9760 acc=6.25% lora_norm=39.9336
+New best model! score=-7.9760
+step=0650 loss=-12.9385 score=-11.4305 acc=6.25% lora_norm=41.7574
+New best model! score=-11.4305
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0700.pt
+step=0700 loss=-12.7374 score=-15.8308 acc=0.00% lora_norm=43.7190
+New best model! score=-15.8308
+step=0750 loss=-21.9572 score=-20.5579 acc=0.00% lora_norm=45.9366
+New best model! score=-20.5579
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0800.pt
+step=0800 loss=-30.0242 score=-26.0107 acc=0.00% lora_norm=48.3189
+New best model! score=-26.0107
+step=0850 loss=-34.1910 score=-33.2015 acc=0.00% lora_norm=51.1167
+New best model! score=-33.2015
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_0900.pt
+step=0900 loss=-43.2295 score=-44.4890 acc=0.00% lora_norm=54.2781
+New best model! score=-44.4890
+step=0950 loss=-58.1012 score=-62.7481 acc=0.00% lora_norm=58.1115
+New best model! score=-62.7481
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1000.pt
+step=1000 loss=-90.5625 score=-88.3208 acc=0.00% lora_norm=62.3174
+New best model! score=-88.3208
+step=1050 loss=-124.6812 score=-127.3151 acc=0.00% lora_norm=66.7854
+New best model! score=-127.3151
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1100.pt
+step=1100 loss=-173.5250 score=-172.7812 acc=0.00% lora_norm=70.9158
+New best model! score=-172.7812
+step=1150 loss=-233.7686 score=-226.5377 acc=0.00% lora_norm=74.6572
+New best model! score=-226.5377
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1200.pt
+step=1200 loss=-276.2257 score=-266.9488 acc=0.00% lora_norm=76.9479
+New best model! score=-266.9488
+step=1250 loss=-294.2387 score=-293.4057 acc=0.00% lora_norm=78.7659
+New best model! score=-293.4057
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1300.pt
+step=1300 loss=-322.4850 score=-316.0552 acc=0.00% lora_norm=80.3954
+New best model! score=-316.0552
+step=1350 loss=-335.0093 score=-336.4787 acc=0.00% lora_norm=81.8105
+New best model! score=-336.4787
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1400.pt
+step=1400 loss=-349.0010 score=-352.0594 acc=0.00% lora_norm=83.1127
+New best model! score=-352.0594
+step=1450 loss=-364.7047 score=-365.8119 acc=0.00% lora_norm=84.3509
+New best model! score=-365.8119
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1500.pt
+step=1500 loss=-381.5168 score=-376.3862 acc=0.00% lora_norm=85.6302
+New best model! score=-376.3862
+step=1550 loss=-380.8558 score=-387.6814 acc=0.00% lora_norm=86.7608
+New best model! score=-387.6814
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1600.pt
+step=1600 loss=-405.3968 score=-397.5398 acc=0.00% lora_norm=87.9068
+New best model! score=-397.5398
+step=1650 loss=-406.0014 score=-407.8933 acc=0.00% lora_norm=89.0735
+New best model! score=-407.8933
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1700.pt
+step=1700 loss=-417.8130 score=-415.0615 acc=0.00% lora_norm=90.1658
+New best model! score=-415.0615
+step=1750 loss=-404.1969 score=-422.6197 acc=0.00% lora_norm=91.1568
+New best model! score=-422.6197
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1800.pt
+step=1800 loss=-431.1667 score=-430.3734 acc=0.00% lora_norm=92.1601
+New best model! score=-430.3734
+step=1850 loss=-443.4780 score=-435.7437 acc=0.00% lora_norm=93.1203
+New best model! score=-435.7437
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_1900.pt
+step=1900 loss=-466.0689 score=-441.5481 acc=0.00% lora_norm=94.0992
+New best model! score=-441.5481
+step=1950 loss=-441.5323 score=-448.1656 acc=0.00% lora_norm=95.0640
+New best model! score=-448.1656
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2000.pt
+step=2000 loss=-458.9409 score=-453.7368 acc=0.00% lora_norm=95.8889
+New best model! score=-453.7368
+step=2050 loss=-470.1317 score=-461.5706 acc=0.00% lora_norm=96.8805
+New best model! score=-461.5706
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2100.pt
+step=2100 loss=-467.9651 score=-467.2247 acc=0.00% lora_norm=97.8350
+New best model! score=-467.2247
+step=2150 loss=-499.7802 score=-472.3831 acc=0.00% lora_norm=98.7748
+New best model! score=-472.3831
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2200.pt
+step=2200 loss=-481.5620 score=-479.0627 acc=0.00% lora_norm=99.7102
+New best model! score=-479.0627
+step=2250 loss=-500.1514 score=-486.3906 acc=0.00% lora_norm=100.6609
+New best model! score=-486.3906
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2300.pt
+step=2300 loss=-501.9621 score=-491.8858 acc=0.00% lora_norm=101.5006
+New best model! score=-491.8858
+step=2350 loss=-511.4621 score=-499.2770 acc=0.00% lora_norm=102.4922
+New best model! score=-499.2770
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2400.pt
+step=2400 loss=-522.0917 score=-503.6206 acc=0.00% lora_norm=103.3507
+New best model! score=-503.6206
+step=2450 loss=-515.9094 score=-509.6766 acc=0.00% lora_norm=104.3141
+New best model! score=-509.6766
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2500.pt
+step=2500 loss=-525.4380 score=-514.7645 acc=0.00% lora_norm=105.2542
+New best model! score=-514.7645
+step=2550 loss=-534.3964 score=-519.1485 acc=0.00% lora_norm=106.1527
+New best model! score=-519.1485
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2600.pt
+step=2600 loss=-536.6635 score=-525.9962 acc=0.00% lora_norm=107.1315
+New best model! score=-525.9962
+step=2650 loss=-531.6516 score=-533.1232 acc=0.00% lora_norm=108.1604
+New best model! score=-533.1232
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2700.pt
+step=2700 loss=-549.7716 score=-539.8906 acc=0.00% lora_norm=109.1706
+New best model! score=-539.8906
+step=2750 loss=-557.3541 score=-546.7897 acc=0.00% lora_norm=110.1799
+New best model! score=-546.7897
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2800.pt
+step=2800 loss=-569.9795 score=-554.0652 acc=0.00% lora_norm=111.2365
+New best model! score=-554.0652
+step=2850 loss=-554.7237 score=-560.9357 acc=0.00% lora_norm=112.2966
+New best model! score=-560.9357
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_2900.pt
+step=2900 loss=-556.0660 score=-568.0518 acc=0.00% lora_norm=113.3298
+New best model! score=-568.0518
+step=2950 loss=-571.0782 score=-574.7479 acc=0.00% lora_norm=114.4084
+New best model! score=-574.7479
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3000.pt
+step=3000 loss=-585.2047 score=-583.7336 acc=0.00% lora_norm=115.4854
+New best model! score=-583.7336
+step=3050 loss=-603.1005 score=-589.3815 acc=0.00% lora_norm=116.5120
+New best model! score=-589.3815
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3100.pt
+step=3100 loss=-598.9342 score=-598.2135 acc=0.00% lora_norm=117.5854
+New best model! score=-598.2135
+step=3150 loss=-603.9572 score=-604.1323 acc=0.00% lora_norm=118.6277
+New best model! score=-604.1323
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3200.pt
+step=3200 loss=-601.4379 score=-612.1248 acc=0.00% lora_norm=119.6594
+New best model! score=-612.1248
+step=3250 loss=-596.4100 score=-619.9493 acc=0.00% lora_norm=120.6802
+New best model! score=-619.9493
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3300.pt
+step=3300 loss=-635.8135 score=-626.3777 acc=0.00% lora_norm=121.6934
+New best model! score=-626.3777
+step=3350 loss=-631.4954 score=-634.8632 acc=0.00% lora_norm=122.6967
+New best model! score=-634.8632
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3400.pt
+step=3400 loss=-634.4077 score=-642.8374 acc=0.00% lora_norm=123.7089
+New best model! score=-642.8374
+step=3450 loss=-645.2541 score=-648.9526 acc=0.00% lora_norm=124.7044
+New best model! score=-648.9526
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3500.pt
+step=3500 loss=-654.9613 score=-656.3524 acc=0.00% lora_norm=125.6514
+New best model! score=-656.3524
+step=3550 loss=-662.8770 score=-661.0045 acc=0.00% lora_norm=126.6230
+New best model! score=-661.0045
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3600.pt
+step=3600 loss=-673.7181 score=-668.4558 acc=0.00% lora_norm=127.5308
+New best model! score=-668.4558
+step=3650 loss=-665.2377 score=-674.7142 acc=0.00% lora_norm=128.4518
+New best model! score=-674.7142
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3700.pt
+step=3700 loss=-670.5563 score=-679.9676 acc=0.00% lora_norm=129.3763
+New best model! score=-679.9676
+step=3750 loss=-682.4985 score=-686.1359 acc=0.00% lora_norm=130.2722
+New best model! score=-686.1359
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3800.pt
+step=3800 loss=-692.8893 score=-691.1561 acc=0.00% lora_norm=131.1467
+New best model! score=-691.1561
+step=3850 loss=-698.5074 score=-697.3861 acc=0.00% lora_norm=131.9881
+New best model! score=-697.3861
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_3900.pt
+step=3900 loss=-689.0807 score=-702.8575 acc=0.00% lora_norm=132.8840
+New best model! score=-702.8575
+step=3950 loss=-704.9803 score=-709.6904 acc=0.00% lora_norm=133.7560
+New best model! score=-709.6904
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4000.pt
+step=4000 loss=-718.6951 score=-715.6677 acc=0.00% lora_norm=134.5729
+New best model! score=-715.6677
+step=4050 loss=-705.5991 score=-721.0478 acc=0.00% lora_norm=135.4065
+New best model! score=-721.0478
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4100.pt
+step=4100 loss=-722.1036 score=-726.0184 acc=0.00% lora_norm=136.2813
+New best model! score=-726.0184
+step=4150 loss=-735.5262 score=-733.5404 acc=0.00% lora_norm=137.1499
+New best model! score=-733.5404
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4200.pt
+step=4200 loss=-739.7374 score=-739.7281 acc=0.00% lora_norm=137.9828
+New best model! score=-739.7281
+step=4250 loss=-747.8940 score=-745.9334 acc=0.00% lora_norm=138.8466
+New best model! score=-745.9334
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4300.pt
+step=4300 loss=-761.0837 score=-751.7852 acc=0.00% lora_norm=139.6457
+New best model! score=-751.7852
+step=4350 loss=-763.4617 score=-757.8350 acc=0.00% lora_norm=140.4580
+New best model! score=-757.8350
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4400.pt
+step=4400 loss=-764.9009 score=-763.3793 acc=0.00% lora_norm=141.3235
+New best model! score=-763.3793
+step=4450 loss=-762.5624 score=-769.8065 acc=0.00% lora_norm=142.1645
+New best model! score=-769.8065
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4500.pt
+step=4500 loss=-768.0543 score=-776.0667 acc=0.00% lora_norm=142.9608
+New best model! score=-776.0667
+step=4550 loss=-789.2748 score=-782.1349 acc=0.00% lora_norm=143.7786
+New best model! score=-782.1349
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4600.pt
+step=4600 loss=-785.0389 score=-787.4508 acc=0.00% lora_norm=144.6282
+New best model! score=-787.4508
+step=4650 loss=-788.2992 score=-794.2982 acc=0.00% lora_norm=145.4581
+New best model! score=-794.2982
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4700.pt
+step=4700 loss=-804.3781 score=-799.5681 acc=0.00% lora_norm=146.2956
+New best model! score=-799.5681
+step=4750 loss=-809.0538 score=-806.8246 acc=0.00% lora_norm=147.0985
+New best model! score=-806.8246
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4800.pt
+step=4800 loss=-797.8098 score=-813.3954 acc=0.00% lora_norm=147.9310
+New best model! score=-813.3954
+step=4850 loss=-820.8508 score=-820.7750 acc=0.00% lora_norm=148.7824
+New best model! score=-820.7750
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_4900.pt
+step=4900 loss=-824.7234 score=-826.5158 acc=0.00% lora_norm=149.6265
+New best model! score=-826.5158
+step=4950 loss=-837.7285 score=-834.4850 acc=0.00% lora_norm=150.4592
+New best model! score=-834.4850
+Checkpoint saved: runs/steps_5000/checkpoints/lora_step_5000.pt
+step=5000 loss=-825.9874 score=-841.8204 acc=0.00% lora_norm=151.3110
+New best model! score=-841.8204
+
+Training finished.
+Final checkpoint saved: runs/steps_5000/checkpoints/lora_final.pt
+Best detector score: -841.8204

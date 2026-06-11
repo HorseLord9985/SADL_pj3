@@ -77,9 +77,10 @@ LOG_FILE = os.path.join(
 
 NETWORK = "stylegan2-ffhq-256x256.pkl"
 
-DEVICE = torch.device(
-    "cuda" if torch.cuda.is_available() else "cpu"
-)
+# DEVICE = torch.device(
+#     "cuda" if torch.cuda.is_available() else "cpu"
+# )
+DEVICE = torch.device("cpu")
 
 STEPS = args.steps
 BATCH_SIZE = args.batch_size
@@ -384,7 +385,7 @@ for step in range(STEPS):
     # Monitoring
     #
 
-    if step % SAVE_EVERY == 0:
+    if step % 50 == 0:
 
         score, acc = save_monitor_image(
             G,

@@ -1,0 +1,27 @@
+## Starting GPU test on node887
+## Loading module
+## Current dircectory /home/s2669447/data1/SADL_pj3
+## Available CUDA devices: 0
+## Checking status of CUDA device with nvidia-smi
+Wed Jun 10 19:15:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      On  |   00000000:02:00.0 Off |                    0 |
+| N/A   58C    P8             21W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+## Running test
+slurmstepd-node887: error: *** JOB 3282823 ON node887 CANCELLED AT 2026-06-10T19:46:13 DUE TO TIME LIMIT ***

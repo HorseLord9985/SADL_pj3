@@ -1,0 +1,62 @@
+## Loading module
+## Current working directory is /home/s2669447/data1/SADL_pj3
+Running task 0
+uv run train_lora_parametric.py --run-name steps_500  --steps 501  --rank 8  --batch-size 16
+Loading StyleGAN...
+Injecting LoRA...
+Injecting LoRA into b64.conv0
+Injecting LoRA into b64.conv1
+Injecting LoRA into b128.conv0
+Injecting LoRA into b128.conv1
+Injecting LoRA into b256.conv0
+Injecting LoRA into b256.conv1
+Loading NPR detector...
+
+Trainable LoRA params: 103,936
+
+Baseline score=66.9952 acc=100.00%
+
+Starting training...
+
+
+===== CONFIG =====
+run      : steps_500
+device   : cpu
+steps    : 501
+batch    : 16
+lr       : 0.0001
+rank     : 8
+==================
+
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0000.pt
+step=0000 loss=57.8448 score=66.9909 acc=100.00% lora_norm=7.2648
+New best model! score=66.9909
+step=0050 loss=60.3817 score=65.6680 acc=100.00% lora_norm=8.5598
+New best model! score=65.6680
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0100.pt
+step=0100 loss=58.5352 score=60.5031 acc=100.00% lora_norm=11.6930
+New best model! score=60.5031
+step=0150 loss=55.3618 score=51.4973 acc=100.00% lora_norm=15.8950
+New best model! score=51.4973
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0200.pt
+step=0200 loss=33.1078 score=41.1360 acc=100.00% lora_norm=20.2510
+New best model! score=41.1360
+step=0250 loss=27.1832 score=31.1648 acc=100.00% lora_norm=24.0213
+New best model! score=31.1648
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0300.pt
+step=0300 loss=27.1152 score=24.2271 acc=100.00% lora_norm=26.9878
+New best model! score=24.2271
+step=0350 loss=12.6018 score=18.4571 acc=100.00% lora_norm=29.6295
+New best model! score=18.4571
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0400.pt
+step=0400 loss=8.0399 score=13.2778 acc=100.00% lora_norm=31.9042
+New best model! score=13.2778
+step=0450 loss=8.0101 score=8.8127 acc=62.50% lora_norm=33.9055
+New best model! score=8.8127
+Checkpoint saved: runs/steps_500/checkpoints/lora_step_0500.pt
+step=0500 loss=-2.2385 score=4.2015 acc=43.75% lora_norm=35.9000
+New best model! score=4.2015
+
+Training finished.
+Final checkpoint saved: runs/steps_500/checkpoints/lora_final.pt
+Best detector score: 4.2015

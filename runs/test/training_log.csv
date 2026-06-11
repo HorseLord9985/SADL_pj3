@@ -1,0 +1,2 @@
+step,loss,score,acc,lora_norm,checkpoint
+-1,0,69.03059387207031,1.0,0,baseline

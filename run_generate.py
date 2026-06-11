@@ -4,7 +4,7 @@ import legacy
 
 network_pkl = "stylegan2-ffhq-256x256.pkl"
 
-device = torch.device("cpu")
+device = torch.device("cuda")
 
 with dnnlib.util.open_url(network_pkl) as f:
     G = legacy.load_network_pkl(f)["G_ema"].to(device)

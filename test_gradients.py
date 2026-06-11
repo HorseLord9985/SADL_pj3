@@ -9,7 +9,7 @@ from lora_stylegan import (
 
 NETWORK = "stylegan2-ffhq-256x256.pkl"
 
-device = torch.device("cpu")
+device = torch.device("cuda")
 
 print("Loading generator...")
 
