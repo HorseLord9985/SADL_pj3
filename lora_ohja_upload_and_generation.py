@@ -15,11 +15,11 @@ from lora_stylegan import (
 # CONFIG
 # ==================================================
 
-ROOT_RUNS = "runs"
 
 NETWORK = "stylegan2-ffhq-256x256.pkl"
 
-OUTPUT_ROOT = "generated_sets"
+ROOT_RUNS = "runs_ohja"
+OUTPUT_ROOT = "generated_sets_ohja"
 
 N_IMAGES = 100
 

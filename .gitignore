@@ -9,3 +9,7 @@ checkpoints/
 checkpoints_ohja/
 **/samples/
 **/samples_ohja/
+runs/
+runs_ohja/
+generated_sets/
+generated_sets_ohja/
